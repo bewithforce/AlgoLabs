@@ -32,20 +32,19 @@ fun Binary(first: BigInteger, second: BigInteger):BigInteger{
     var b = second
     a = a.abs()
     b = b.abs()
-
-    var multiplier = 1
+    var multiplier = BigInteger.ONE
     while (b != BigInteger.ZERO){
         if (a == b) {
-            return a.multiply(BigInteger(multiplier.toString()))
+            return a* multiplier
         }
         if (a == BigInteger.ZERO) {
-            return b.multiply(BigInteger(multiplier.toString()))
+            return b* multiplier
         }
         if (b == BigInteger.ZERO) {
-            return a.multiply(BigInteger(multiplier.toString()))
+            return a* multiplier
         }
         if (a == BigInteger.ONE || b == BigInteger.ONE) {
-            return BigInteger.ONE
+            return BigInteger.ONE * multiplier
         }
         val remA = a.mod(BigInteger(2.toString()))
         val remB = b.mod(BigInteger(2.toString()))
@@ -68,12 +67,12 @@ fun Binary(first: BigInteger, second: BigInteger):BigInteger{
         else
             b = (b - a) shr 1
     }
-    return a.multiply(BigInteger(multiplier.toString()))
+    return a* multiplier
 }
 
 fun main() {
-    val a = BigInteger("16602747662452097049541800472897701834948051198384828062358553091918573717701170201065510185595898605104094736918879278462233015981029522997836311232618760539199036765399799926731433239718860373345088375054249")
-    val b = BigInteger("10261062362033262336604926729245222132668558120602124277764622905699407982546711488272859468887457959087733119242564077850743657661180827326798539177758919828135114407499369796465649524266755391104990099120377")
+    val a = BigInteger("14")
+    val b = BigInteger("12")
 
     var start = System.nanoTime()
     var gcd = Euclidean(a, b)

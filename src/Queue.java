@@ -72,7 +72,7 @@ public class Queue<T> {
         return node.anInt;
     }
 
-
+    
     public static void main(String[]args){
         Queue<Integer> list = new Queue<>();
         list.push(42);

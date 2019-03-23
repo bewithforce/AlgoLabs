@@ -156,7 +156,8 @@ public class DoubleLinkedList<T> {
         DoubleLinkedList<Integer> list = new DoubleLinkedList<>();
         list.add(42);
         list.add(42);
-        list.addAt(17, 2);
+        list.remove(42);
+        list.addAt(17, 1);
         list.removeAt(1);
         System.out.println(list);
     }
