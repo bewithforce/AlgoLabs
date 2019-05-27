@@ -1,3 +1,5 @@
+package lab1;
+
 public class DoubleLinkedList<T> {
     private class Node{
         private Node next;

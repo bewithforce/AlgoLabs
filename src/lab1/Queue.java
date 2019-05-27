@@ -1,3 +1,5 @@
+package lab1;
+
 public class Queue<T> {
     private class Node{
         private Node next;
@@ -7,14 +9,14 @@ public class Queue<T> {
         }
     }
 
-    private Node head, tail;
-    private int size = 0;
+    public Node head, tail;
+    public int size = 0;
 
-    private Queue(){
+    public Queue(){
         head = tail = null;
     }
 
-    private void push(T a){
+    public void push(T a){
         Node node = new Node();
         node.anInt = a;
         if (head == null){
@@ -30,7 +32,7 @@ public class Queue<T> {
         size++;
     }
 
-    private T pop(){
+    public T pop(){
         if(size == 0){
             return null;
         }
@@ -55,7 +57,7 @@ public class Queue<T> {
         return string.toString();
     }
 
-    private T get(int index){
+    public T get(int index){
         if(index > size - 1 || index < 0){
             return null;
         }

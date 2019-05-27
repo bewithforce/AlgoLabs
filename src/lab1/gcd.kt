@@ -1,3 +1,5 @@
+package lab1
+
 import java.math.BigInteger
 
 fun Euclidean(first: BigInteger, second: BigInteger):BigInteger {
@@ -78,14 +80,14 @@ fun main() {
     var gcd = Euclidean(a, b)
     var end = System.nanoTime()
     var result = end - start
-    println("Euclidean GCD of $a and $b equals $gcd")// 1
-    println("It takes $result ns to count it by Euclidean algorithm\n")
+    println("lab1.Euclidean GCD of $a and $b equals $gcd")// 1
+    println("It takes $result ns to count it by lab1.Euclidean algorithm\n")
 
     start = System.nanoTime()
     gcd = Binary(a, b)
     end = System.nanoTime()
     result = end - start
-    println("Binary GCD of $a and $b equals $gcd")// 1
-    println("It takes $result ns to count it by Binary algorithm")
+    println("lab1.Binary GCD of $a and $b equals $gcd")// 1
+    println("It takes $result ns to count it by lab1.Binary algorithm")
 
 }
